@@ -6,7 +6,7 @@ import Error from "../Error";
 import Events from "./conversations/events";
 
 const MessageWrapper = ({ message, handler, loading }) => {
-  if (message?.value) {
+  if (message?.value && message.sender === "bot") {
     switch (message.value) {
       case "taste":
         return <WineTasteMessage message={message} loading={loading} />;
@@ -17,7 +17,7 @@ const MessageWrapper = ({ message, handler, loading }) => {
       case "wines":
         return <WineList message={""} />;
       case "events":
-        return <Events message={message} />
+        return <Events message={message} />;
       default:
         return (
           <>
@@ -29,8 +29,15 @@ const MessageWrapper = ({ message, handler, loading }) => {
           </>
         );
     }
-  } 
-    return <Error message="No data available" />
+  }
+
+  if (message.sender === "client") {
+    console.log('message',message)
+    return (
+      <ChatMessage message={message} handler={handler} loading={loading} />
+    );
+  }
+  return <Error message="No data available" />;
 };
 
 export default MessageWrapper;

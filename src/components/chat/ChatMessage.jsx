@@ -8,14 +8,21 @@ const ChatMessage = ({ message, handler, loading }) => {
   
   return (
     <div className="px-4 mb-2">
-      <div className="flex gap-3 p-2">
+      <div className={`flex gap-3 p-2 ${ message?.sender === "client" ? "flex-row-reverse" : ""}`}>
         <Avatar className="size-8">
+          {message?.sender === "client" ? <img
+            className="w-full h-full"
+            alt="Client"
+            src="/user-circle-svgrepo-com.svg"
+          />
+          :
           <img
             className="w-full h-full"
             alt="Halleck Avatar"
             src="/image-308.png"
-          />
+          />}
         </Avatar>
+        {/* user-circle-svgrepo-com.svg */}
 
         <div className="flex flex-col justify-start items-center gap-4">
           <div className="">
