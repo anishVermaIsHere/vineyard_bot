@@ -11,17 +11,23 @@ const ChatHeader = () => {
 
       <div className="flex justify-center items-center gap-[18px]">
         <button
-          className="w-3 h-[13.26px] bg-[url('vector.svg')] cursor-pointer"
+          className="w-3 h-[13.26px] cursor-pointer"
           title="Reload"
-        ></button>
+        >
+          <img src="vector.svg" className=""/>
+        </button>
         <button
-          className="w-3.5 h-[1.27px] bg-[url('group.png')] cursor-pointer"
+          className="w-3.5 h-[1.27px] cursor-pointer"
           title="Menu"
-        ></button>
+        >
+          <img src="group.png" className=""/>
+        </button>
         <button
-          className="w-3 h-3 bg-[url('vector-1.svg')] cursor-pointer"
+          className="w-3 h-3 cursor-pointer"
           title="Close"
-        ></button>
+        >
+          <img src="vector-1.svg" className=""/>
+        </button>
       </div>
     </div>
   );
