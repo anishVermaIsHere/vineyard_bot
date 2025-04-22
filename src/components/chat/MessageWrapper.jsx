@@ -6,7 +6,7 @@ import Error from "../Error";
 import Events from "./conversations/events";
 
 const MessageWrapper = ({ message, handler, loading }) => {
-  if (message?.value && message.sender === "bot") {
+  if (message?.value && message?.sender === "bot") {
     switch (message.value) {
       case "taste":
         return <WineTasteMessage message={message} loading={loading} />;
@@ -31,8 +31,7 @@ const MessageWrapper = ({ message, handler, loading }) => {
     }
   }
 
-  if (message.sender === "client") {
-    console.log('message',message)
+  if (message?.sender === "client") {
     return (
       <ChatMessage message={message} handler={handler} loading={loading} />
     );
