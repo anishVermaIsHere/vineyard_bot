@@ -23,4 +23,7 @@ npm run dev
 3. Now your app will start successfully.
 
 
+## Screen Video
+https://github.com/user-attachments/assets/c3fcded6-7d9c-41a0-b22e-d6446924c75e
+
 
