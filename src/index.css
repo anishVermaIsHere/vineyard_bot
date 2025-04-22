@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --carbon-darkest: rgba(36, 38, 43, 1);
+  --carbon-neutral300: rgba(214, 217, 221, 1);
+  --label-color-light-primary: rgba(0, 0, 0, 1);
+  --systemorange-light: rgba(255, 149, 0, 1);
+  --themewhite-themecore-tokensprimary-black: rgba(38, 38, 38, 1);
+}
+
+@layer base {
+  :root {
+    --primary: #ecded2;
+    --primary-outline: #a66836;
+    --primary-hover: #f1e7de;
+    --secondary: #fafafc;
+    --message: #f7f7f7;
+    --text-primary: #574d39;
+    --text-secondary: #a8a8a8;
+    --secondary-light: #C0C3C42E;
+    --primary-dark: #AD703E;
+    
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .bg-primary {
+    @apply bg-[var(--primary)];
+  }
+  .bg-secondary {
+    @apply bg-[var(--secondary)];
+  }
+  .text-primary {
+    @apply text-[var(--text-primary)];
+  }
+  .text-secondary {
+    @apply text-[var(--text-secondary)];
+  }
+  .bg-msg {
+    @apply bg-[var(--message)];
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
