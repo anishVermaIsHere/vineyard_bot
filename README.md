@@ -6,7 +6,7 @@
 1. Download this code as zip or clone by command 
 
 ```
-git clone https://github.com/anishVermaIsHere/vineyard.git
+git clone https://github.com/anishVermaIsHere/vineyard_bot.git
 ```
 in terminal and open visual studio code with terminal and run command 
 
